@@ -1,0 +1,224 @@
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam
+$ git init
+Initialized empty Git repository in D:/GitExam/.git/
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ vim file.txt
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git config --global user.name "tusharghodake"
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git config --global user.email "tdg.ghodake@gmil.com"
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git config --global user.email "tdg.ghodake@gmail.com"
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file.txt
+
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git commit -m "1st commit by master"
+[master (root-commit) 1737827] 1st commit by master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ gitlog
+bash: gitlog: command not found
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git log
+commit 173782743a9945035e656db82b29f26c0c24025b (HEAD -> master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git remote add origin https://github.com/tusharghodake/Exam.git
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 226 bytes | 226.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/tusharghodake/Exam.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git branch
+* master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git branch cdac
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git branch
+  cdac
+* master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git checkout cdac
+Switched to branch 'cdac'
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git branch
+* cdac
+  master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ vim file.txt
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git status
+On branch cdac
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git log
+commit 173782743a9945035e656db82b29f26c0c24025b (HEAD -> cdac, origin/master, master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git commit -m "2nd commit by cdac"
+[cdac 9fc9689] 2nd commit by cdac
+ 1 file changed, 1 insertion(+)
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git log
+commit 9fc9689b17916281eff26355e3450e0e3910d025 (HEAD -> cdac)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:45:39 2019 +0530
+
+    2nd commit by cdac
+
+commit 173782743a9945035e656db82b29f26c0c24025b (origin/master, master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git status
+On branch cdac
+nothing to commit, working tree clean
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git log
+commit 9fc9689b17916281eff26355e3450e0e3910d025 (HEAD -> cdac)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:45:39 2019 +0530
+
+    2nd commit by cdac
+
+commit 173782743a9945035e656db82b29f26c0c24025b (origin/master, master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git push origin cdac
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'cdac' on GitHub by visiting:
+remote:      https://github.com/tusharghodake/Exam/pull/new/cdac
+remote:
+To https://github.com/tusharghodake/Exam.git
+ * [new branch]      cdac -> cdac
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git branch
+* cdac
+  master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (cdac)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git branch
+  cdac
+* master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git clone https://github.com/tusharghodake/Exam.git
+Cloning into 'Exam'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 7 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git log
+commit 173782743a9945035e656db82b29f26c0c24025b (HEAD -> master, origin/master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git merge cdac
+Updating 1737827..9fc9689
+Fast-forward
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$ git log
+commit 9fc9689b17916281eff26355e3450e0e3910d025 (HEAD -> master, origin/cdac, cdac)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:45:39 2019 +0530
+
+    2nd commit by cdac
+
+commit 173782743a9945035e656db82b29f26c0c24025b (origin/master)
+Author: tusharghodake <tdg.ghodake@gmail.com>
+Date:   Mon Jun 17 00:42:05 2019 +0530
+
+    1st commit by master
+
+Tushar@DESKTOP-H1D1BUJ MINGW64 /d/GitExam (master)
+$
